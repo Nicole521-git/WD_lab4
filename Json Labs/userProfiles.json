@@ -1,0 +1,58 @@
+{
+  "userProfiles": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@example.com",
+      "dateOfBirth": "1978-06-15",
+      "address": {
+        "street": "XinHua Road",
+        "city": "Shijiazhuang",
+        "state": "Yuhua",
+        "zipCode": "11111"
+      },
+      "preferences": {
+        "theme": "quit",
+        "language": "English",
+        "notifications": true,
+        "subscription": false
+      }
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "janesmith@example.com",
+      "dateOfBirth": "2004-04-05",
+      "address": {
+        "street": "Art Stress",
+        "city": "Langfang",
+        "state": "Anci",
+        "zipCode": "22222"
+      },
+      "preferences": {
+        "theme": "light",
+        "language": "Chinese",
+        "notifications": false,
+        "subscription": false
+      }
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Jones",
+      "email": "emilyjones@example.com",
+      "dateOfBirth": "1977-03-17",
+      "address": {
+        "street": "Queen Stress",
+        "city": "Baoding",
+        "state": "Guangyang",
+        "zipCode": "33333"
+      },
+      "preferences": {
+        "theme": "dark",
+        "language": "French",
+        "notifications": true,
+        "subscription": false
+      }
+    }
+  ]
+}

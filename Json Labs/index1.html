@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>User Profiles</h1>
+    <div id="userProfiles"></div>
+
+    <script>
+        fetch('userProfiles.json')
+            .then(response => {
+                if (!response.ok)
+                    throw new Error('Fetch error: ' + response.status)
+                else
+                    return response.json();
+            })
+            .then(json => {
+
+                const userProfiles = json.userProfiles;
+
+                let resultHTML = '';
+
+                userProfiles.forEach(profile => {
+                    resultHTML += `<div class="user-profile">
+                        <p>First Name: ${profile.firstName}</p>
+                        <p>Last Name: ${profile.lastname}</p>
+                        <p>Email: ${profile.email}</p>
+                        <p>Date of Birth: ${profile.dateOfBirth}</p>
+                        <p>Address:</p>
+                        <p>street: ${profile.address.street}, city:${profile.address.city}, state:${profile.address.state}, zipcode:${profile.address.zipCode}</p>
+                        <p>Theme: ${profile.preferences.theme}</p>
+                        <p>Language: ${profile.preferences.language}</p>
+                        <p>Notifications: ${profile.preferences.notifications ? 'Yes' : 'No'}</p>
+                        <p>Subscription: ${profile.preferences.subscription ? 'Subscribed' : 'Not Subscribed'}</p>
+                        <hr>
+                        </div>`;
+                });
+
+                document.getElementById('userProfiles').innerHTML = resultHTML;
+
+            })
+            .catch(err => console.error('Fetch error: ' + err.message)); 
+    </script>
+</body>
+
+</html>
